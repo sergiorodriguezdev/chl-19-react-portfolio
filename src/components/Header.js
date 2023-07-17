@@ -3,7 +3,7 @@ import avatar from "../assets/avatars/avatar-header.png";
 
 function Header(props) {
   return (
-    <header className="d-flex pt-1 ps-1 bg-body-tertiary">
+    <header className="d-flex pt-3 ps-3 bg-body-tertiary">
       <h1 className="display-1">
         <img
           src={avatar}

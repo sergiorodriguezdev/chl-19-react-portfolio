@@ -4,7 +4,8 @@ function Nav({ currentPage, setCurrentPage }) {
   const clickNavLink = (e) => {
     e.preventDefault();
     const clickedLinkText = e.target.textContent;
-
+    document.title = `Sergio Rodriguez - ${clickedLinkText}`
+    
     switch (clickedLinkText) {
       case "About Me":
         setCurrentPage("aboutme");
