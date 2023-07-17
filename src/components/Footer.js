@@ -10,7 +10,7 @@ function Footer(props) {
   };
 
   return (
-    <footer className="fixed-bottom">
+    <footer className="fixed-bottom text-center">
       <div>
         <span>© {new Date().getFullYear()} Copyright: Sergio Rodriguez </span>
         <a className="link-secondary link-underline-opacity-0" href="https://github.com/sergiorodriguezdev" target="_blank" rel="noreferrer">
@@ -26,7 +26,7 @@ function Footer(props) {
           <img src={logo} alt="React Logo" style={styles.logo} />
         </a>
         <span>and </span>
-        <a className="link-primary link-underline-opacity-0" href="https://getbootstrap.com/" target="_blank" rel="noreferrer">
+        <a className="link-secondary link-underline-opacity-0" href="https://getbootstrap.com/" target="_blank" rel="noreferrer">
           <i className="bi bi-bootstrap-fill"></i>
         </a>
       </div>

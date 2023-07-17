@@ -8,7 +8,8 @@ function Header(props) {
         <img
           src={avatar}
           alt="avatar"
-          className="w-25 rounded-circle border border-success border-3"
+          className="bg-light rounded-circle border border-success border-3"
+          style={{width: "15%"}}
         />
         <span> Sergio Rodriguez</span>
       </h1>
