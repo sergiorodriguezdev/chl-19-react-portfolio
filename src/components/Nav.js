@@ -5,7 +5,7 @@ function Nav({ currentPage, setCurrentPage }) {
     e.preventDefault();
     const clickedLinkText = e.target.textContent;
     document.title = `Sergio Rodriguez - ${clickedLinkText}`
-    
+
     switch (clickedLinkText) {
       case "About Me":
         setCurrentPage("aboutme");
@@ -46,8 +46,8 @@ function Nav({ currentPage, setCurrentPage }) {
             <button
               className={
                 currentPage === "aboutme"
-                  ? "text-decoration-underline nav-link active"
-                  : "nav-link"
+                ? "text-decoration-underline nav-link fs-4 active"
+                : "nav-link fs-4"
               }
               type="button"
               onClick={clickNavLink}
@@ -57,8 +57,8 @@ function Nav({ currentPage, setCurrentPage }) {
             <button
               className={
                 currentPage === "portfolio"
-                  ? "text-decoration-underline nav-link active"
-                  : "nav-link"
+                ? "text-decoration-underline nav-link fs-4 active"
+                : "nav-link fs-4"
               }
               type="button"
               onClick={clickNavLink}
@@ -69,8 +69,8 @@ function Nav({ currentPage, setCurrentPage }) {
             <button
               className={
                 currentPage === "contact"
-                  ? "text-decoration-underline nav-link active"
-                  : "nav-link"
+                ? "text-decoration-underline nav-link fs-4 active"
+                : "nav-link fs-4"
               }
               type="button"
               onClick={clickNavLink}
@@ -81,8 +81,8 @@ function Nav({ currentPage, setCurrentPage }) {
             <button
               className={
                 currentPage === "resume"
-                  ? "text-decoration-underline nav-link active"
-                  : "nav-link"
+                  ? "text-decoration-underline nav-link fs-4 active"
+                  : "nav-link fs-4"
               }
               type="button"
               onClick={clickNavLink}

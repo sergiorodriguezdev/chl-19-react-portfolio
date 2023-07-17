@@ -10,7 +10,8 @@ function Footer(props) {
   };
 
   return (
-    <footer className="fixed-bottom text-center">
+    // <footer className="fixed-bottom text-center">
+    <footer className="mt-3 text-center">
       <div>
         <span>© {new Date().getFullYear()} Copyright: Sergio Rodriguez </span>
         <a className="link-secondary link-underline-opacity-0" href="https://github.com/sergiorodriguezdev" target="_blank" rel="noreferrer">

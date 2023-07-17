@@ -25,7 +25,7 @@ function Page({ currentPage }) {
     }
   };
 
-  return <div>{renderPage()}</div>;
+  return <div className="mt-3">{renderPage()}</div>;
 }
 
 export default Page;
