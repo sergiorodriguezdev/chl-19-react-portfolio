@@ -4,12 +4,15 @@ import Page from './components/Page'
 import Footer from './components/Footer';
 
 function App() {
+
+  const pages = ['aboutme', 'portfolio', 'contact', 'resume'];
+
   return (
     <div>
       {/* Header */}
       <Header>
       </Header>
-      <Nav>
+      <Nav currentPage={pages[0]}>
 
       </Nav>
       {/* Content */}
