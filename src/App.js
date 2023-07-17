@@ -1,4 +1,3 @@
-// import logo from './logo.svg';
 import './App.css';
 import Header from './components/Header';
 import Nav from './components/Nav';
@@ -18,10 +17,8 @@ function App() {
       <main className='container'>
         <Page></Page>
       </main>
-      {/* Footer */}
-      <Footer>
 
-      </Footer>
+      <Footer />
     </div>
   );
 }

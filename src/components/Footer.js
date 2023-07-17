@@ -14,10 +14,10 @@ function Footer(props) {
       <div>
         <span>© {new Date().getFullYear()} Copyright: Sergio Rodriguez </span>
         <a className="link-secondary link-underline-opacity-0" href="https://github.com/sergiorodriguezdev" target="_blank" rel="noreferrer">
-            <i class="bi bi-github"> </i>
+            <i className="bi bi-github"> </i>
         </a>
         <a className="link-secondary link-underline-opacity-0" href="https://www.linkedin.com/in/sergiodrodriguez/" target="_blank" rel="noreferrer">
-            <i class="bi bi-linkedin"></i>
+            <i className="bi bi-linkedin"></i>
         </a>
       </div>
       <div>
@@ -27,7 +27,7 @@ function Footer(props) {
         </a>
         <span>and </span>
         <a className="link-primary link-underline-opacity-0" href="https://getbootstrap.com/" target="_blank" rel="noreferrer">
-          <i class="bi bi-bootstrap-fill"></i>
+          <i className="bi bi-bootstrap-fill"></i>
         </a>
       </div>
     </footer>
