@@ -11,14 +11,22 @@ function Footer(props) {
 
   return (
     <footer className="fixed-bottom">
-      <div>© {new Date().getFullYear()} Copyright: Sergio Rodriguez</div>
+      <div>
+        <span>© {new Date().getFullYear()} Copyright: Sergio Rodriguez </span>
+        <a className="link-secondary link-underline-opacity-0" href="https://github.com/sergiorodriguezdev" target="_blank" rel="noreferrer">
+            <i class="bi bi-github"> </i>
+        </a>
+        <a className="link-secondary link-underline-opacity-0" href="https://www.linkedin.com/in/sergiodrodriguez/" target="_blank" rel="noreferrer">
+            <i class="bi bi-linkedin"></i>
+        </a>
+      </div>
       <div>
         <span>Powered by</span>
         <a href="https://react.dev/" target="_blank" rel="noreferrer">
           <img src={logo} alt="React Logo" style={styles.logo} />
         </a>
         <span>and </span>
-        <a href="https://getbootstrap.com/" target="_blank" rel="noreferrer">
+        <a className="link-primary link-underline-opacity-0" href="https://getbootstrap.com/" target="_blank" rel="noreferrer">
           <i class="bi bi-bootstrap-fill"></i>
         </a>
       </div>
