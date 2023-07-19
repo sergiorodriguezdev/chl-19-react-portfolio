@@ -1,11 +1,13 @@
 import React from "react";
-import AboutMe from './AboutMe';
-import Portfolio from './Portfolio';
-import ContactMe from './ContactMe';
-import Resume from './Resume';
+import AboutMe from '../AboutMe';
+import Portfolio from '../Portfolio';
+import ContactMe from '../ContactMe';
+import Resume from '../Resume';
 
-
+// Destructure component props
 function Page({ currentPage }) {
+
+  // Dynamically render components based on state variable value
   const renderPage = () => {
     switch (currentPage) {
       case "aboutme":

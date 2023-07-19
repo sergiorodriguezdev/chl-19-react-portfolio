@@ -1,45 +1,41 @@
 import React, { useState } from "react";
 
-function ContactMe(props) {
+function ContactMe() {
+  // Email regex to validate email input
   const emailRegEx = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/;
 
+  // Create state variables to track form input values
   const [formName, setFormName] = useState("");
   const [formEmail, setFormEmail] = useState("");
   const [formMessage, setFormMessage] = useState("");
 
+  // Create state variables to track whether an input value is blank and email is valid
   const [isNameBlank, setIsNameBlank] = useState(false);
   const [isEmailBlank, setIsEmailBlank] = useState(false);
   const [isEmailValid, setIsEmailValid] = useState(true);
   const [isMessageBlank, setIsMessageBlank] = useState(false);
-  const [disableSubmit, setDisableSubmit] = useState(true);
 
+  // Handler function used when form input field loses focus
   const validateInput = (e) => {
+    // Destructure the field's name and value
     const { name, value } = e.target;
+
+    // Check if value is empty
     const isBlank = value.trim().length === 0;
 
     if (name === "name") {
-      setIsNameBlank(isBlank);
-      setDisableSubmit(isBlank || isEmailBlank || isMessageBlank);
+      setIsNameBlank(isBlank); // If Name is blank, set state variable
+      
     } else if (name === "email") {
-      setIsEmailBlank(isBlank);
-      setDisableSubmit(isNameBlank || isBlank || isMessageBlank);
+      setIsEmailBlank(isBlank); // If Email is blank, set state variable
+      
       if (!isBlank) {
-        setIsEmailValid(emailRegEx.test(formEmail));
+        setIsEmailValid(emailRegEx.test(formEmail)); // If Email isn't blank, then set valid email variable by validating regex
       }
     } else if (name === "message") {
-      setIsMessageBlank(isBlank);
-      setDisableSubmit(isNameBlank || isEmailBlank || isBlank);
+      setIsMessageBlank(isBlank); // If Message is blank, set state variable
+      
     }
-  };
-
-  const formSubmit = (e) => {
-    e.preventDefault();
-
-    alert("Message sent!");
-
-    setFormName("");
-    setFormEmail("");
-    setFormMessage("");
   };
 
   return (
@@ -49,8 +45,9 @@ function ContactMe(props) {
       </div>
       <div className="row">
         <div className="col-12 col-lg-6">
-          <form onSubmit={formSubmit}>
+          <form>
             <label>Name</label>
+            {/* If Name is blank, display error message */}
             {isNameBlank ? (
               <label className="ms-2 text-danger">
                 This value is required!
@@ -61,12 +58,13 @@ function ContactMe(props) {
             <input
               type="text"
               name="name"
-              value={formName}
+              value={formName}  // Set value to state variable
               className="form-control"
-              onBlur={validateInput}
-              onChange={(e) => setFormName(e.target.value.trim())}
+              onBlur={validateInput}  // Set onBlur handler
+              onChange={(e) => setFormName(e.target.value.trim())} // Update state variable when value changes
             ></input>
             <label>Email Address</label>
+            {/* If Email is blank, display error message */}
             {isEmailBlank ? (
               <label className="ms-2 text-danger">
                 This value is required!
@@ -74,6 +72,7 @@ function ContactMe(props) {
             ) : (
               <label />
             )}
+            {/* If Email isn't valid, display error message */}
             {!isEmailValid ? (
               <label className="ms-2 text-danger">
                 Please enter a valid email!
@@ -84,12 +83,13 @@ function ContactMe(props) {
             <input
               type="email"
               name="email"
-              value={formEmail}
+              value={formEmail}  // Set value to state variable
               className="form-control"
-              onBlur={validateInput}
-              onChange={(e) => setFormEmail(e.target.value.trim())}
+              onBlur={validateInput}  // Set onBlur handler
+              onChange={(e) => setFormEmail(e.target.value.trim())} // Update state variable when value changes
             ></input>
             <label>Message</label>
+            {/* If Message is blank, display error message */}
             {isMessageBlank ? (
               <label className="ms-2 text-danger">
                 This value is required!
@@ -99,16 +99,16 @@ function ContactMe(props) {
             )}
             <textarea
               name="message"
-              value={formMessage}
+              value={formMessage} // Set value to state variable
               className="form-control"
               rows="5"
-              onBlur={validateInput}
-              onChange={(e) => setFormMessage(e.target.value)}
+              onBlur={validateInput}  // Set onBlur handler
+              onChange={(e) => setFormMessage(e.target.value)} // Update state variable when value changes
             ></textarea>
             <button
               type="submit"
               className="btn btn-primary mt-2"
-              disabled={disableSubmit ? true : false}
+              disabled={true} // Disable form submit button since functionality isn't built in
             >
               Submit
             </button>

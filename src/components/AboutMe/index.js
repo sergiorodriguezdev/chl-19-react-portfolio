@@ -1,7 +1,7 @@
 import React from "react";
-import avatar from "../assets/avatars/avatar-aboutme.png";
+import avatar from "../../assets/avatars/avatar-aboutme.png";
 
-function AboutMe(props) {
+function AboutMe() {
   return (
     <div>
       <div className="row">

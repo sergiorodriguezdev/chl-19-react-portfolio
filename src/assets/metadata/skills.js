@@ -1,3 +1,4 @@
+// List of skills listed in Resume section
 const resumeSkills = [
     'HTML',
     'CSS',

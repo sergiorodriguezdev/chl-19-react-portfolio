@@ -1,7 +1,8 @@
 import React from "react";
-import logo from "../ReactLogo.svg";
+import logo from "../../assets/ReactLogo.svg";  // Import React logo
 
-function Footer(props) {
+function Footer() {
+  // Create styles object and properties
   const styles = {
     logo: {
       height: "24px",
@@ -10,9 +11,9 @@ function Footer(props) {
   };
 
   return (
-    // <footer className="fixed-bottom text-center">
     <footer className="mt-3 text-center">
       <div>
+        {/* Display current year on page footer */}
         <span>© {new Date().getFullYear()} Copyright: Sergio Rodriguez </span>
         <a className="link-secondary link-underline-opacity-0" href="https://github.com/sergiorodriguezdev" target="_blank" rel="noreferrer">
             <i className="bi bi-github"> </i>
@@ -24,6 +25,7 @@ function Footer(props) {
       <div>
         <span>Powered by</span>
         <a href="https://react.dev/" target="_blank" rel="noreferrer">
+          {/* Set img src to logo imported and apply styles object to style attribute */}
           <img src={logo} alt="React Logo" style={styles.logo} />
         </a>
         <span>and </span>

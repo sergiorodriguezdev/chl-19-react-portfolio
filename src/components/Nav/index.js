@@ -1,11 +1,15 @@
 import React from "react";
 
+// Destructure component props
 function Nav({ currentPage, setCurrentPage }) {
+  
+  // Link click handler
   const clickNavLink = (e) => {
     e.preventDefault();
     const clickedLinkText = e.target.textContent;
-    document.title = `Sergio Rodriguez - ${clickedLinkText}`
+    document.title = `Sergio Rodriguez - ${clickedLinkText}`; // Set the page title dynamically to include the name of the page
 
+    // Update state variable depending on link clicked
     switch (clickedLinkText) {
       case "About Me":
         setCurrentPage("aboutme");
@@ -23,8 +27,12 @@ function Nav({ currentPage, setCurrentPage }) {
         break;
     }
   };
+
   return (
-    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    <nav
+      className="navbar navbar-expand-lg"
+      style={{ backgroundColor: "#004e64" }}
+    >
       <div className="container-fluid">
         <span>{/* This is meant to be empty */}</span>
         <button
@@ -45,48 +53,45 @@ function Nav({ currentPage, setCurrentPage }) {
           <div className="navbar-nav">
             <button
               className={
-                currentPage === "aboutme"
-                ? "text-decoration-underline nav-link fs-4 active"
-                : "nav-link fs-4"
+                currentPage === "aboutme" // Set CSS classes dynamically depending on value of state variable currentPage
+                  ? "text-decoration-underline nav-link fs-4 active"
+                  : "nav-link fs-4"
               }
               type="button"
-              onClick={clickNavLink}
+              onClick={clickNavLink} // Set link click handler
             >
               About Me
             </button>
             <button
               className={
-                currentPage === "portfolio"
-                ? "text-decoration-underline nav-link fs-4 active"
-                : "nav-link fs-4"
+                currentPage === "portfolio" // Set CSS classes dynamically depending on value of state variable currentPage
+                  ? "text-decoration-underline nav-link fs-4 active"
+                  : "nav-link fs-4"
               }
               type="button"
-              onClick={clickNavLink}
-
+              onClick={clickNavLink} // Set link click handler
             >
               Portfolio
             </button>
             <button
               className={
-                currentPage === "contact"
-                ? "text-decoration-underline nav-link fs-4 active"
-                : "nav-link fs-4"
+                currentPage === "contact" // Set CSS classes dynamically depending on value of state variable currentPage
+                  ? "text-decoration-underline nav-link fs-4 active"
+                  : "nav-link fs-4"
               }
               type="button"
-              onClick={clickNavLink}
-
+              onClick={clickNavLink} // Set link click handler
             >
               Contact Me
             </button>
             <button
               className={
-                currentPage === "resume"
+                currentPage === "resume" // Set CSS classes dynamically depending on value of state variable currentPage
                   ? "text-decoration-underline nav-link fs-4 active"
                   : "nav-link fs-4"
               }
               type="button"
-              onClick={clickNavLink}
-
+              onClick={clickNavLink} // Set link click handler
             >
               Resume
             </button>

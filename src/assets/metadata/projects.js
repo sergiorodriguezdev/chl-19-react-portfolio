@@ -1,3 +1,4 @@
+// Project metadata used to populate portfolio section
 const projects = [
     {
         name: 'Foo(d) and Bar - Recipe Generator',
