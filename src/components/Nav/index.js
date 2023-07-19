@@ -30,8 +30,7 @@ function Nav({ currentPage, setCurrentPage }) {
 
   return (
     <nav
-      className="navbar navbar-expand-lg"
-      style={{ backgroundColor: "#004e64" }}
+      className="navbar navbar-expand-lg bg-body-tertiary"
     >
       <div className="container-fluid">
         <span>{/* This is meant to be empty */}</span>
