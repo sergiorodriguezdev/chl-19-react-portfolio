@@ -15,7 +15,7 @@ function Project({ project }) {
         {/* Display project name */}
         {project.name}
         <a
-          href={`https://github.com/sergiorodriguezdev/${project.repoName}`} // Set link using repoName property
+          href={project.repoName === 'blogifyr'? 'https://github.com/EpipKL/blogifyr':`https://github.com/sergiorodriguezdev/${project.repoName}`} // Set link using repoName property
           target="_blank"
           rel="noreferrer"
           className="link-light"
